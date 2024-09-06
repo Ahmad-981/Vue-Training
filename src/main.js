@@ -1,8 +1,6 @@
-// src/main.js
-import { defineCustomElement } from 'vue';
-import MyComponent from './components/MyComponent.vue';
+import './style.css';
+import './assets/styles/tailwind.css';
+import { createApp } from 'vue';
+import App from './App.vue';
 
-// Create a custom element from the Vue component
-const MyVueComponent = defineCustomElement(MyComponent);
-
-customElements.define('my-vue-component', MyVueComponent);
+createApp(App).mount('#app') ;

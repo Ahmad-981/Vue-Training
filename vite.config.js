@@ -5,7 +5,7 @@ export default defineConfig({
   plugins: [vue()],
   build: {
     lib: {
-      entry: 'src/main.js',  // Entry point for the library
+      entry: 'src/index.js',  // Entry point for the library
       name: 'MyVueComponentLibrary',  // Global name
       fileName: (format) => `vue-web-component.${format}.js`,
       formats: ['umd'],  // Use UMD format for web components

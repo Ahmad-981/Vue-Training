@@ -35,3 +35,8 @@
         </div>
     </div>
 </template>
+
+
+<style lang="css">
+  @import url('../assets/styles/tailwind.css'); /* Import the Tailwind CSS file */
+</style>

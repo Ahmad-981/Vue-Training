@@ -1,9 +1,10 @@
-// src/main.js
 import { defineCustomElement } from 'vue';
-import MyComponent from './components/MyComponent.vue';
-
-// Create a custom element from the Vue component
-const MyVueComponent = defineCustomElement(MyComponent);
+import TextField from './components/TextField.vue';
+import Button from './components/Button.vue';
 
 // Define the custom element
-customElements.define('my-vue-component', MyVueComponent);
+// const TextFieldElement = defineCustomElement(TextField);
+// customElements.define('text-field', TextFieldElement);
+
+const ButtonElement = defineCustomElement(Button);
+customElements.define('my-button', ButtonElement);

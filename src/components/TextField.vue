@@ -1,10 +1,11 @@
-<!-- src/components/TextField.vue -->
 <template>
   <div>
     <input
       :placeholder="placeholder"
       :type="type"
       v-model="inputValue"
+      @change="handleChange"
+      @click="handleClick"
       class="border rounded-md w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500"
     />
   </div>
@@ -26,11 +27,23 @@ export default {
       type: String,
       default: '',
     },
+    required: {
+      type: Boolean,
+      default: false,
+    },
   },
   data() {
     return {
       inputValue: this.value,
     };
+  },
+  methods: {
+    handleChange() {
+      this.$emit('change', this.inputValue);
+    },
+    handleClick() {
+      this.$emit('click');
+    },
   },
   watch: {
     inputValue(newValue) {

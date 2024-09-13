@@ -1,10 +1,13 @@
-import { defineCustomElement } from 'vue';
-import TextField from './components/TextField.vue';
-import Button from './components/Button.vue';
+import { defineCustomElement } from "vue";
+import TextField from "./components/TextField.ce.vue";
+import Button from "./components/Button.ce.vue";
+import MyComponentCe from "./components/MyComponent.ce.vue";
 
-// Define the custom element
-const TextFieldElement = defineCustomElement(TextField);
-customElements.define('text-field', TextFieldElement);
+// const TextFieldElement = defineCustomElement(TextField, { shadow: false });
+// customElements.define("text-field", TextFieldElement);
 
 // const ButtonElement = defineCustomElement(Button);
-// customElements.define('my-button', ButtonElement);
+// customElements.define("my-button", ButtonElement);
+
+const MyComponentElement = defineCustomElement(MyComponentCe);
+customElements.define("my-vue-component", MyComponentElement);

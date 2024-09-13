@@ -7,21 +7,23 @@
 })(this, function (e) {
   "use strict";
   const t = (n, o) => {
-      const s = n.__vccOpts || n;
-      for (const [i, r] of o) s[i] = r;
-      return s;
+      const r = n.__vccOpts || n;
+      for (const [d, s] of o) r[d] = s;
+      return r;
     },
-    u = {
+    i =
+      ".btn[data-v-8901ed34]{border:none;border-radius:4px;padding:8px 16px;color:#fff;cursor:pointer}.btn.primary[data-v-8901ed34]{background-color:#d45d85}.btn.secondary[data-v-8901ed34]{background-color:gray}",
+    c = {
       name: "Button",
       props: { type: { type: String, default: "primary" } },
     };
-  function d(n, o, s, i, r, l) {
+  function a(n, o, r, d, s, l) {
     return (
       e.openBlock(),
       e.createElementBlock(
         "button",
         {
-          class: e.normalizeClass(["btn", s.type]),
+          class: e.normalizeClass(["btn", r.type]),
           onClick: o[0] || (o[0] = (p) => n.$emit("click")),
         },
         [e.renderSlot(n.$slots, "default", {}, void 0, !0)],
@@ -29,10 +31,11 @@
       )
     );
   }
-  const f = t(u, [
-      ["render", d],
-      ["__scopeId", "data-v-b7182197"],
+  const u = t(c, [
+      ["render", a],
+      ["styles", [i]],
+      ["__scopeId", "data-v-8901ed34"],
     ]),
-    c = e.defineCustomElement(f);
-  customElements.define("my-button", c);
+    f = e.defineCustomElement(u);
+  customElements.define("my-button", f);
 });

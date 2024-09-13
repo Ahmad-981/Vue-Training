@@ -15,7 +15,7 @@ export default defineConfig({
     lib: {
       entry: "src/index.js",
       name: "MyVueComponentLibrary",
-      fileName: (format) => `my-vue-component.${format}.js`,
+      fileName: (format) => `form-component.${format}.js`,
       formats: ["umd"],
     },
     rollupOptions: {

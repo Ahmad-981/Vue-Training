@@ -4,6 +4,7 @@ import { ref } from 'vue';
 // import TextField from './components/TextField.ce.vue';
 // import SubmitButton from './components/Button.vue';
 // import MyComponent from './components/MyComponent.ce.vue';
+import FormComponent from './components/FormComponent.ce.vue';
 
 const inputValue = ref('');
 
@@ -49,9 +50,14 @@ function handleSubmit() {
     </form>
   </div>
 
+  <div>
+    <!-- <FormComponent/> -->
+    <form-component />
+  </div>
+
   <div class=" flex mt-20 justify-center">
     <my-vue-component></my-vue-component>
-    <!-- <MyComponent /> -->
+    <MyComponent />
   </div>
 </template>
 

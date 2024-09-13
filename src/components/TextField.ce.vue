@@ -1,8 +1,6 @@
-
 <script setup>
 import { ref, watch, toRefs } from 'vue';
 
-// Props
 const props = defineProps({
   placeholder: {
     type: String,
@@ -20,16 +18,13 @@ const props = defineProps({
 
 const emit = defineEmits(['update:modelValue', 'change', 'click']);
 
-// Refs for reactive data
 const { modelValue } = toRefs(props);
 const inputValue = ref(modelValue.value);
 
-// Watch for prop changes to keep inputValue in sync with the parent
 watch(modelValue, (newValue) => {
   inputValue.value = newValue;
 });
 
-// Methods
 const handleChange = () => {
   emit('change', inputValue.value);
 };
@@ -38,7 +33,6 @@ const handleClick = () => {
   emit('click');
 };
 
-// Emit model updates to keep v-model sync between parent and child
 watch(inputValue, (newValue) => {
   emit('update:modelValue', newValue);
 });
